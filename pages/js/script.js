@@ -58,9 +58,7 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
           sliderList.classList.add('animate__animated');
           sliderList.classList.add('animate__bounceInRight');
         }, 200);
-
       });
-
       document.querySelector('.slider-button').addEventListener('click', () => {
         if (arrpets.length) 
         setTimeout(() => {
@@ -74,8 +72,6 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
         sliderList.classList.add('animate__animated');
         sliderList.classList.add('animate__bounceInLeft');
       }, 200);
-
     });
-
     petListAdd();
   });
