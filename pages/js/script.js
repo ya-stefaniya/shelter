@@ -24,13 +24,14 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
       
       for (let i = 0; i < 3; i++) {
         const itemNumber = arrpets[i]
-        sliderList.append(petItemTemplate.cloneNode(true))
+        sliderList.append(petItemTemplate.cloneNode(true));
         const sliderItem = sliderList.querySelectorAll('.pets__content-items')
         const sliderImg = sliderList.querySelectorAll('.pets__picture')
         const sliderName = sliderList.querySelectorAll('.pets__content-items-name')
+   
         sliderItem[sliderItem.length - 1].setAttribute('data-modal', `${json[itemNumber].name}`)
         sliderName[sliderItem.length - 1].textContent = `${json[itemNumber].name}`
-        sliderImg[sliderItem.length - 1].setAttribute('src', `${json[itemNumber].img}`)
+        sliderImg[sliderItem.length - 1].setAttribute('src', `${json[itemNumber].img}`);
      }
      
      petsSlider.addEventListener('click', (evt) => {
@@ -41,21 +42,40 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
     });
     }
     let arrows = document.querySelectorAll('.sl-button');
-    arrows.forEach(arrow => {
-    arrow.addEventListener('click', () => {
-    
-     if (arrpets.length) 
-     setTimeout(() => {
-      sliderList.remove(petItemTemplate.cloneNode(true))
-      arrpets.splice(0, 3);
-      console.log(arrpets);
-     }, 500);
-     setTimeout(() => {
-      generatePets();
-      petListAdd();
-    }, 500);
-     
-  });
-  });
+
+
+
+        document.querySelector('.slider-button__reverted').addEventListener('click', () => {
+          if (arrpets.length) 
+          setTimeout(() => {
+          sliderList.remove(petItemTemplate.cloneNode(true))
+          arrpets.splice(0, 3);
+          }, 200);
+          setTimeout(() => {
+          generatePets();
+          petListAdd();
+          document.documentElement.style.setProperty('--animate-duration', '2s');
+          sliderList.classList.add('animate__animated');
+          sliderList.classList.add('animate__bounceInRight');
+        }, 200);
+
+      });
+
+      document.querySelector('.slider-button').addEventListener('click', () => {
+        if (arrpets.length) 
+        setTimeout(() => {
+        sliderList.remove(petItemTemplate.cloneNode(true))
+        arrpets.splice(0, 3);
+        }, 200);
+        setTimeout(() => {
+        generatePets();
+        petListAdd();
+        document.documentElement.style.setProperty('--animate-duration', '2s');
+        sliderList.classList.add('animate__animated');
+        sliderList.classList.add('animate__bounceInLeft');
+      }, 200);
+
+    });
+
     petListAdd();
   });
