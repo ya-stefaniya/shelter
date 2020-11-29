@@ -1,0 +1,339 @@
+$color-dark-xl: #4C4C4C;
+
+@mixin paragraph-l {
+    font: {
+    family: Arial;
+    weight: normal;
+    size: 1.5rem;
+    }
+    line-height: 160%;  
+}
+html {
+    overflow-x: hidden;
+   
+}
+.wrapper{
+margin-left: 1rem;
+margin-right: 1rem;
+max-width: 30rem;
+}
+.header{
+top: 30px;
+    &__wrapper{
+        margin-top: 0;
+        padding-top: 0;
+        justify-content: space-around;
+    }
+    .logo{
+        margin: 0;
+    }
+}
+.menu {
+    width: 11rem;
+    margin-left: 0;
+    .list{
+    display: none;
+    }
+    .burger{
+    cursor: pointer;
+    display: block;  
+    width: 5rem;
+    height: 5rem;  
+      
+        span{
+        display: block;   
+        width: 3rem;
+        height: 2px;
+        background-color: #F1CDB3;
+        top: 50%;
+        position: absolute;
+        right: 17%;
+        &::before,
+        &::after{
+        position: absolute;
+        width: 3rem;
+        height: 2px;
+        background-color: #F1CDB3;
+        content: '';
+        display: block;
+        transition: 0.5s;
+        }
+    }
+}
+}
+
+
+.not-only{
+padding-top: 15rem;
+&__content{
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+.content{
+    align-items: center;
+    &-section{
+        margin-right: 0rem;
+        max-width: 30rem;
+        align-items: center;
+        text-align: center;
+
+        &__title{
+            margin: 0 auto;
+            font-size: 25px;
+            max-width: 23rem;
+            line-height: 3.2rem;
+            letter-spacing: 0.15rem;
+        }
+        &__subtitle{
+            line-height: 2.4rem;                    
+            max-width: 30rem;
+            margin: 0;
+            padding-top: 4.2rem;
+        }
+        &__button{
+            margin-top: 4rem;
+            margin-left: 0;
+        }
+    }
+}
+&__image{
+width: 26rem;
+height: 27rem;
+margin-top: 1rem;
+margin-left: 4rem;
+}          
+}
+.about{
+max-width: 30rem;
+    .container{
+        margin: 4.2rem 0.5rem;
+        flex-direction: column-reverse;
+       
+    }
+    &__image__wrapper{
+        width: 26rem;
+        height: 35.4rem;
+        margin-top: 4rem;
+        margin-right: 5px;
+    }
+    &__content{
+        margin: 0 auto;
+        max-width: 30rem;
+    }
+    &__title{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        font-size: 25px;
+        line-height: 3.2rem;
+        letter-spacing: 0.15rem;
+    }
+    &__description{
+        text-align: justify;
+        p{
+            &:nth-child(2){
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+.pets{
+    .container{
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+    }
+    &__title{
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 4rem;
+    }
+    .slider-button{
+       order: 1;
+       margin: 2rem 4rem 0;
+    }
+    .slider-button__reverted{
+        order: 2;
+        margin: 2rem 4rem 0;
+    }
+    &__slider-box{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4rem;
+        margin: 0 1.2rem;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &-items{
+            background: #FAFAFA;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:nth-child(2){
+                display: none;
+            }
+        }        
+    }
+    &__button{
+        margin-top: 4rem;
+    }
+}
+.help{
+    margin-left: 0;
+    margin-right: 0; 
+    margin-bottom: 4rem;
+    .wrapper{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 32rem;
+    }
+    &__wrapper{
+        margin: 0 auto;
+        margin-top: 4rem;
+        max-width: 30rem;
+        padding-left: 0.5rem;
+    } 
+    &__title{
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+        letter-spacing: 0.15rem;
+        width: 27rem;
+ 
+    }
+    &__rows{
+        margin: 4.2rem 0 0;
+        column-gap: 3rem;
+        row-gap: 3rem;
+        justify-content: flex-start;
+        &__panel{
+            width: 13rem;
+            height: 8.7rem;
+            & img{
+                width: 5rem;
+                margin: 0;        
+                margin-bottom: 2rem;
+            }
+            h4 {font-size: 1.5rem;
+            line-height: 1.7rem;
+            letter-spacing: 0.09rem;
+            }
+        }
+    }
+}
+.in-addition{
+    .container{
+        margin-top: 4.3rem;
+        margin-bottom: 3.9rem;
+    }
+    &__wrapper__image{
+        padding-top: 0;
+    }
+    &__image{
+        padding-top: 0;
+        img{
+            width: 26rem;
+            height: 13.5rem;
+        }
+        
+    }
+    &__content{
+        width: 100%;
+        padding: 0 1rem 4.2rem 0.9rem;
+        row-gap: 2rem;
+        align-items: center;
+        text-align: center;
+    
+        &__title{
+        padding: 0 3rem;
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+        letter-spacing: 0.15rem;
+        }
+        &__subtitle{
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+            letter-spacing: 0rem;
+            color: #545454;
+            padding: 0;
+        }
+        &__card-number {
+            padding: 1em 1.3rem;
+            span{
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+            letter-spacing: 0.09rem;
+            }
+        }
+        &__text{
+            margin-top: 0;
+            text-align: justify;
+        }
+    }
+}
+.footer{
+    
+    &__wrapper{        
+        padding-top:0;  
+        &__address-title, &__questions-title{
+            padding: 0 1rem;
+            font-size: 2.5rem;
+            line-height: 3.2rem;
+            letter-spacing: 0.15rem;
+        }    
+         &__questions-title{
+            margin-top: 3rem;
+        }
+        &__link{
+            margin-top: 2rem;
+        }
+        &__link.number, &__address__street.london{
+        padding-bottom: 4rem;
+        }
+        &__link a, &__address a{
+        margin-top: 0.3rem;
+        text-decoration: none;
+        align-items: center;
+            img{
+            margin-right: 2rem;
+            }
+        }
+        &__image{ 
+            margin: 0 auto;
+            img{            
+                width: 26rem;
+                height: auto;
+                margin-top: 0;
+            }
+        }
+        
+        &__questions{            
+            width: 31rem;
+            margin: 0;
+            padding-top: 0;
+            align-items: center;
+            text-align: center;
+        }
+        &__address{
+            margin: 0 auto;
+            padding-top: 0;
+            &-title{
+                text-align: center;
+                padding-bottom: 0.6rem;
+            }
+            &__street{
+                margin-left: 0;
+                margin-right: 0;
+                padding-bottom: 0.8rem;
+            }
+            &__street.boston img{
+                width: 4rem;
+            }    
+        }    
+    }    
+}

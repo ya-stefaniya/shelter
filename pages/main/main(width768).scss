@@ -1,0 +1,139 @@
+html {
+    overflow-x: hidden;
+  }
+    .wrapper{
+        margin-left: 3rem;
+        margin-right: 3rem;
+     }
+     .header{
+         top: 30px;
+         &__wrapper{
+             margin-top: 0;
+             padding-top: 0;
+             justify-content: space-around;
+         }
+         .logo{
+             margin: 0;
+         }
+     }
+     .menu{
+         width: 46rem;
+         margin-left: 6rem;
+         .list{
+             &__item{
+                 margin-left: 2rem;
+                 margin-right: 0;
+             }
+         }
+     }
+     .not-only{
+         padding-top: 15rem;
+         width: 100%;
+         flex-direction: column;
+         &__content{
+             flex-direction: column;
+             //padding-left: 15.5rem;        
+         }
+         .content{
+             &-section{
+                 margin: 0 auto;
+                 width: 46rem;
+                 padding-bottom: 10rem;
+                &__title{
+                     margin-top: 0;
+                }
+                &__subtitle{
+                    padding-right: 0;
+                }
+                &__button {
+                     margin-left: 12.5rem;
+                 }
+             }
+         }
+         &__image{
+             width: 569px;
+             height: 593px;
+             left: calc(50% - 569px/2 + 70px);
+             margin-left: 14rem;
+         }
+     }
+     .about .container{
+         flex-direction: column-reverse;
+     }
+     
+     .about__image{      
+         &__wrapper {
+         margin-right: 6.5rem;
+         margin-top: 8rem;
+         }
+     }
+     .pets{
+         &__slider-box{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+            margin: 0;
+         }
+         &__content-items.three{
+             display: none;
+         }
+         &__content-items:nth-child(2){
+             padding-right: 2rem;
+         }
+         .hidden{
+             display: none
+         }
+     }
+     .help{
+         &__rows{
+            margin: 5.8rem 0 0 0;
+            column-gap: 5.9rem;
+            row-gap: 5.5rem;
+            &__panel{
+                width: 17rem;
+            }
+        }
+         
+     }
+     .in-addition .container{
+         flex-direction: column-reverse;
+         padding-top: 0;
+     }
+     .in-addition__wrapper__image {
+         padding-top: 6rem;
+         margin-right: 0px;
+     }
+     .footer__wrapper{
+         display: flex;
+         flex-wrap: wrap;
+         align-self: center;
+         padding-top: 1.3rem; 
+         &__questions{
+             margin-left: 3.5rem;
+             row-gap: 2rem;
+             &-title{
+                 margin-top: 1.5rem;
+             }
+         }
+         &__link{
+             margin-top: 1rem;
+             &.number{
+                 margin-top: 1rem;
+             }
+         }
+         &__address{
+             margin-left: 0rem;
+             row-gap: 3rem;
+             margin-right: 2.5rem;
+             padding-top: 1.3rem;
+             &__street.boston img{
+                 width: 4rem;
+             }     
+         }
+         &__image {
+             margin: 0;
+             margin-top: 1.5rem;
+             margin-left: 20.5rem;
+         
+         }
+     }
+ 
