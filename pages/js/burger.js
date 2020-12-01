@@ -17,8 +17,8 @@ burger.addEventListener('click', function(e) {
     toggleMenu();
     isRotated = !isRotated;
     isRotated ? 
-      document.body.style.overflowY = 'hidden'  :
-      document.body.style.overflowY = '';
+      ddocument.querySelector("html").style.overflowY = 'hidden' :
+      document.querySelector("html").style.overflowY = ''; ;
 });
 document.addEventListener('click', function(e) {
     const target = e.target;
