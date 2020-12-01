@@ -45,10 +45,6 @@ function popup(event) {
 </div>
   `);
 
-  //let modalBox =  document.querySelector('.modal-box');
-
-
-
   const darkScreen = document.querySelector('.darkScreen')
   darkScreen.style.top = window.pageYOffset + 'px'; 
   darkScreen.classList.add('animate__animated');
