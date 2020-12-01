@@ -1232,15 +1232,13 @@ button {
     min-width: 18.5rem;
   }
   .header .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     position: absolute;
-    right: -32rem;
+    right: 0;
     top: 0;
     width: 32rem;
     background-color: #292929;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
@@ -1253,6 +1251,9 @@ button {
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header .list {
     -webkit-box-orient: vertical;
@@ -1313,7 +1314,7 @@ button {
   }
   .not-only__image {
     padding-top: 0rem;
-    height: auto;
+    height: 100%;
     width: 100%;
     max-width: 37rem;
     margin-left: 4rem;
@@ -1643,19 +1644,13 @@ button {
     z-index: 5;
   }
   .header .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     position: absolute;
-    right: -32rem;
+    right: 0;
     top: 0;
     width: 32rem;
     background-color: #292929;
-    height: 100vh;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .header .menu.active {
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
