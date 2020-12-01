@@ -451,7 +451,10 @@ ul.friends__list.slider{
         &:disabled, [disabled] {
             border: 2px solid #CDCDCD;
         }
-
+        &:disabled:hover, [disabled]{
+            background-color: transparent;
+            cursor: auto;
+        }
     }
 }
 

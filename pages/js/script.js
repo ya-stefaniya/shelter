@@ -41,37 +41,24 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
       }
     });
     }
-    let arrows = document.querySelectorAll('.sl-button');
-
-
-
-        document.querySelector('.slider-button__reverted').addEventListener('click', () => {
+      let arrows = document.querySelectorAll('.sl-button');
+      arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
           if (arrpets.length) 
           setTimeout(() => {
-          sliderList.remove(petItemTemplate.cloneNode(true))
-          arrpets.splice(0, 3);
-          }, 200);
+          sliderList.classList.add('animate__animated');
+          sliderList.classList.add('animate__slideOutRight');
+          sliderList.remove(petItemTemplate.cloneNode(true));
+              arrpets.splice(0, 3);
+          }, 100);
           setTimeout(() => {
           generatePets();
           petListAdd();
-          document.documentElement.style.setProperty('--animate-duration', '2s');
+          document.documentElement.style.setProperty('--animate-duration', '.5s');
           sliderList.classList.add('animate__animated');
-          sliderList.classList.add('animate__bounceInRight');
-        }, 200);
+          sliderList.classList.add('animate__fadeInUp');
+        }, 100);
       });
-      document.querySelector('.slider-button').addEventListener('click', () => {
-        if (arrpets.length) 
-        setTimeout(() => {
-        sliderList.remove(petItemTemplate.cloneNode(true))
-        arrpets.splice(0, 3);
-        }, 200);
-        setTimeout(() => {
-        generatePets();
-        petListAdd();
-        document.documentElement.style.setProperty('--animate-duration', '2s');
-        sliderList.classList.add('animate__animated');
-        sliderList.classList.add('animate__bounceInLeft');
-      }, 200);
     });
     petListAdd();
   });

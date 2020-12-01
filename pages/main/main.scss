@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    max-width: 1280px;
     justify-content: center;
 }
 
@@ -149,6 +148,7 @@ button{
 .header {
     position: absolute;
     width: 100%;
+    padding: 0 5rem;
     &__wrapper{
         @include flex(row, space-between);
         align-items: center;
@@ -183,15 +183,18 @@ button{
                 text-decoration: none;
                 color:$color-dark-s;
                 &:hover{
-                    color: $color-light-s;
-                    cursor: pointer;
+                    color:$color-dark-s;
+                    cursor: none;
                 }
                 &.disabled{
                     pointer-events: none;
+                    color:$color-dark-s;
                     }
             }
             &__active{
                 border-bottom: solid 3px $color-primary;
+                text-decoration: none;
+                color: $color-dark-s;
             }
             
         }
@@ -253,7 +256,7 @@ button{
         display: none
  }
 .not-only{
-    padding-top: 18rem;
+    padding: 18rem 5rem 0;
     display: flex;
     background: url(../../assets/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 
@@ -276,7 +279,7 @@ button{
         }
         &__subtitle {
             padding-right: 3rem;
-            color: #CDCDCD;
+            color:$color-dark-s;
             font-size: 1.5rem;
             font-family: Arial;
             line-height: 160%;
@@ -741,8 +744,9 @@ button{
         margin-right: 3rem;
       }
       .header {
-        padding-top: 3rem;
+        //padding-top: 3rem;
         top: 0;
+        padding: 3rem 0 0 0;
       }
       .header__wrapper {
         margin-top: 0;
@@ -761,7 +765,7 @@ button{
         margin-right: 0;
       }
       .not-only {
-        padding-top: 15rem;
+        padding: 15rem 0 0 0;
         width: 100%;
        flex-direction: column;
       }
@@ -946,7 +950,7 @@ button{
             top: 0;
             width: 32rem;
             background-color:#292929;
-            height: 104.1rem;   
+            height: 100vh;  
             transition: transform 0.3s ease-in-out;
         }
         .menu.active{
@@ -999,9 +1003,11 @@ button{
             }
         }
         &__image{
-            padding-top: 5rem;
+            padding-top: 0rem;
             height: auto;
             width: 100%;
+            max-width: 37rem;
+            margin-left: 4rem;
         }
     }
   
@@ -1205,6 +1211,11 @@ button{
     }    
 }
 @media screen and (max-width: 460px){
+    .not-only__content{
+        .content-section{
+            max-width: 30rem;
+        }
+    }
     .pets{
         .container{
             margin-top: 4.5rem;
@@ -1299,7 +1310,7 @@ button{
             top: 0;
             width: 32rem;
             background-color:#292929;
-            height: 823px;   
+            height: 100vh;  
             transition: transform 0.3s ease-in-out;
         }
         .menu.active{
@@ -1440,10 +1451,7 @@ button{
         }
     }      
         
-    // .animate__animated.animate__backInUp {
-    //     --animate-duration: 0.5s;
-    //     --animate-delay: 0.9s;
-    //   }
+
 
 
   

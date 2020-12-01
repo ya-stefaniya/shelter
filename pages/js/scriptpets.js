@@ -75,7 +75,7 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
           if (!uniqueStepList.includes(list[j])) {
             uniqueStepList.push(list[j]);
             list.splice(j, 1);
-            j--
+            j--;
           }
         }
         unique8List = [...unique8List, ...uniqueStepList];
@@ -126,11 +126,13 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
       }
     }
   
-    draw(pageNumber)
+    draw(pageNumber);
   
     const delPets = () => {
       while (freindsList.firstChild) {
         freindsList.removeChild(freindsList.firstChild);
+      freindsList.classList.add('animate__animated');
+      freindsList.classList.add('animate__fadeIn');
       }
     }
   
@@ -153,7 +155,9 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
     nextBtn.addEventListener('click', () => {
       pageNumber++
       pageSpan.textContent = pageNumber
-      delPets()
+      delPets();
+      freindsList.classList.add('animate__animated');
+      freindsList.classList.add('animate__fadeIn');
       draw(pageNumber)
       if (pageNumber === lastPage) {
         lastBtn.setAttribute('disabled', 'disabled')
@@ -164,9 +168,11 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
     })
   
     previousBtn.addEventListener('click', () => {
-      pageNumber--
-      pageSpan.textContent = pageNumber
-      delPets()
+      pageNumber--;
+      pageSpan.textContent = pageNumber;
+      delPets();
+      freindsList.classList.add('animate__animated');
+      freindsList.classList.add('animate__fadeIn');
       draw(pageNumber)
       if (pageNumber === 1) {
         firstBtn.setAttribute('disabled', 'disabled')

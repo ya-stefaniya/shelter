@@ -9,11 +9,11 @@ function popup(event) {
   
   let name = event.target.closest('.pets__content-items').getAttribute('data-modal');
   let i = pets.findIndex(elem => elem.name == name);
+ 
   document.body.insertAdjacentHTML('afterbegin', `
   <div class='darkScreen' id='darkScreen'>
     <div class="dark"></div>
     <div class="modal-box"> 
-     
         <div class="modal-box_main">
             <div class="modal-box__pic">
               <img src="${pets[i].img}" alt="${pets[i].name}">
@@ -44,10 +44,15 @@ function popup(event) {
     </div>
 </div>
   `);
-  
-  const darkScreen = document.querySelector('.darkScreen')
 
+  //let modalBox =  document.querySelector('.modal-box');
+
+
+
+  const darkScreen = document.querySelector('.darkScreen')
   darkScreen.style.top = window.pageYOffset + 'px'; 
+  darkScreen.classList.add('animate__animated');
+  darkScreen.classList.add('animate__fadeIn');
 
   document.querySelectorAll('.dark, .modal-box_button')
   .forEach(elem => elem.addEventListener('click', () => {

@@ -502,8 +502,8 @@ ul.friends__list.slider {
 .slide-bar-button-previous, .slide-bar-button-first {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  border: 2px solid #CDCDCD;
 }
-
 
 .slide-bar-button.inactive {
   border: 2px solid #CDCDCD;
@@ -528,6 +528,11 @@ ul.friends__list.slider {
 
 .slide-bar-button:disabled, .slide-bar-button [disabled] {
   border: 2px solid #CDCDCD;
+}
+
+.slide-bar-button:disabled:hover, .slide-bar-button [disabled] {
+  background-color: transparent;
+  cursor: auto;
 }
 
 .footer {
@@ -655,6 +660,7 @@ ul.friends__list.slider {
     padding: 0;
   }
 }
+
 @media screen and (max-width: 950px) {
   ul.friends__list.slider {
     -ms-grid-columns: (1fr)[2];
@@ -666,6 +672,7 @@ ul.friends__list.slider {
     padding-top: 3.5rem;
   }
 }
+
 @media screen and (width: 768px) {
   ul.friends__list.slider {
     -ms-grid-columns: (1fr)[2];
