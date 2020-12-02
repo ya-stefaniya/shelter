@@ -5,12 +5,12 @@ const burger = document.querySelector('.burger-menu'),
 let isRotated = false;
 
 const toggleMenu = function() {
-  menuNav.classList.toggle('active');
-  menuNav.classList.toggle('animate__animated');
-  menuNav.classList.add('animate__fadeInRight');
-  burger.classList.toggle('active');
-  //headerActiveMenu.classList.toggle('active-menu');
-  
+    menuNav.classList.toggle('active');
+    menuNav.classList.toggle('animate__animated');
+    menuNav.classList.add('animate__fadeInRight');
+    burger.classList.toggle('active');
+    headerActiveMenu.style.overflow = 'hidden';
+
 }
 burger.addEventListener('click', function(e) {
     e.stopPropagation();

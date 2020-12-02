@@ -1319,10 +1319,6 @@ button {
     max-width: 37rem;
     margin-left: 4rem;
   }
-  .not-only.active-menu {
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-  }
   .about .container {
     margin: 4.2rem 0.5rem;
     -webkit-box-orient: vertical;
