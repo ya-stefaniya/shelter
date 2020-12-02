@@ -9,7 +9,7 @@ const toggleMenu = function() {
   menuNav.classList.toggle('animate__animated');
   menuNav.classList.add('animate__fadeInRight');
   burger.classList.toggle('active');
-  headerActiveMenu.classList.toggle('active-menu');
+  //headerActiveMenu.classList.toggle('active-menu');
   
 }
 burger.addEventListener('click', function(e) {
