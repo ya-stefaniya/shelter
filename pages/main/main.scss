@@ -946,8 +946,9 @@ button{
             }
         }
         .menu {
-            display: none;    
-            position: absolute;
+            z-index: 1;
+            display: none;
+            position: fixed;
             right: 0;
             top: 0;
             width: 32rem;

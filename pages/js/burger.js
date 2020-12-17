@@ -18,7 +18,7 @@ burger.addEventListener('click', function(e) {
     isRotated = !isRotated;
     isRotated ? 
     document.body.style.overflow = 'hidden':
-    document.body.style.overflowY = ''; 
+    document.body.style.overflow = ''; 
 });
 document.addEventListener('click', function(e) {
     const target = e.target;
