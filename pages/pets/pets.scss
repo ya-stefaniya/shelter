@@ -541,14 +541,15 @@ ul.friends__list.slider{
     }
     .darkScreen {
         .modal-box{
-            width: 63rem;
+            width: 31rem;
+            flex-direction: column;
             &__pic img{
-                height: 35rem;
-                width: 35rem;
+                height: 30rem;
+                width: 30rem;
             }
-            
             &_main{
-                max-width: 65rem;
+                max-width: 30rem;
+                flex-direction: column;
             }
             .modal-description{
                 max-width: 26rem;
@@ -558,8 +559,7 @@ ul.friends__list.slider{
                     
                 }
                 .modal-description__description{
-                    margin-bottom: 1.9rem;
-                    font-size: 1.3rem;
+                    display: none;
                 }
                 .modal-description__list{
                     li{

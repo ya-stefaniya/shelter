@@ -1560,8 +1560,7 @@ button {
     margin-bottom: 2rem;
   }
   .darkScreen .modal-box .modal-description .modal-description__description {
-    margin-bottom: 1.9rem;
-    font-size: 1.3rem;
+    display: none;
   }
   .darkScreen .modal-box .modal-description .modal-description__list li {
     padding-bottom: 0.6rem;
