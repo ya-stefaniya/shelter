@@ -220,7 +220,7 @@ button{
     align-items: center;  
     width: 5rem;
     height: 5rem;
-    
+    z-index: 2;
         &__line{
         position: relative;   
         width: 3rem;
@@ -1320,9 +1320,8 @@ button{
         }
         .list{
             flex-direction: column;
-            padding-top: 10rem;
             justify-content: flex-start;
-            margin-top: 15rem;
+            margin-top: 10rem;
             &__item{
                 padding-bottom: 4rem;
             }

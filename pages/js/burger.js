@@ -16,6 +16,7 @@ burger.addEventListener('click', function(e) {
     e.stopPropagation();
     toggleMenu();
     isRotated = !isRotated;
+    console.log('isRotated: ', isRotated);
     isRotated ? 
     document.body.style.overflow = 'hidden':
     document.body.style.overflow = ''; 
@@ -24,6 +25,7 @@ document.addEventListener('click', function(e) {
     const target = e.target;
     const its_menu = target == menuNav || menuNav.contains(target);
     const its_btnMenu = target == burger;
+    console.log('its_btnMenu: ', its_btnMenu);
   
     const menu_is_active = menuNav.classList.contains('active');
     if (!its_menu && !its_btnMenu && menu_is_active  ) {
