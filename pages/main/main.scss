@@ -1211,6 +1211,39 @@ button{
         }    
     }    
 }
+@media screen and (max-width: 720px){
+    .darkScreen {
+        .modal-box{
+            width: 31rem;
+            flex-direction: column;
+            &__pic img{
+                height: 30rem;
+                width: 30rem;
+            }
+            &_main{
+                max-width: 30rem;
+                flex-direction: column;
+            }
+            .modal-description{
+                max-width: 26rem;
+                margin: 1rem 0.9rem auto 1rem;
+                .modal-description__breed-type{
+                    margin-bottom: 2rem;
+                    
+                }
+                .modal-description__description{
+                    margin-bottom: 1.9rem;
+                    font-size: 1.3rem;
+                }
+                .modal-description__list{
+                    li{
+                    padding-bottom: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 460px){
     .not-only__content{
         .content-section{
