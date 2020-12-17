@@ -1261,7 +1261,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 10rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -1271,7 +1270,7 @@ button {
     padding-bottom: 4rem;
   }
   .header .list__link {
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 5rem;
   }
   .header .burger-menu {

@@ -963,14 +963,13 @@ button{
         }
         .list{
             flex-direction: column;
-            padding-top: 10rem;
             justify-content: flex-start;
             margin-top: 15rem;
             &__item{
                 padding-bottom: 4rem;
             }
             &__link{
-            font-size: 3.2rem;
+            font-size: 3rem;
             line-height: 5rem;
             }
         }
