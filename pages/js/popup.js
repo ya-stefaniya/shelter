@@ -1,15 +1,15 @@
 let pets = [];
 let sliderItem = document.querySelectorAll('.pets__content-items');
 fetch('../js/pets.json').then(res => res.json()).then(list => pets = list);
- 
 
 
-function popup(event) {
+
+function popup(event, page) {
   document.querySelector("html").style.overflowY = 'hidden';
-  
+
   let name = event.target.closest('.pets__content-items').getAttribute('data-modal');
   let i = pets.findIndex(elem => elem.name == name);
- 
+
   document.body.insertAdjacentHTML('afterbegin', `
   <div class='darkScreen' id='darkScreen'>
     <div class="dark"></div>
@@ -45,15 +45,14 @@ function popup(event) {
 </div>
   `);
 
-  const darkScreen = document.querySelector('.darkScreen')
-  darkScreen.style.top = window.pageYOffset + 'px'; 
+  const darkScreen = document.querySelector('.darkScreen');
+  darkScreen.style.top = (page !== 'main' ? 0 : window.pageYOffset + 'px');
   darkScreen.classList.add('animate__animated');
   darkScreen.classList.add('animate__fadeIn');
 
   document.querySelectorAll('.dark, .modal-box_button')
-  .forEach(elem => elem.addEventListener('click', () => {
-    document.querySelector("html").style.overflowY = '';    
-    darkScreen.remove();
-  }));
+    .forEach(elem => elem.addEventListener('click', () => {
+      document.querySelector("html").style.overflowY = '';
+      darkScreen.remove();
+    }));
 }
-

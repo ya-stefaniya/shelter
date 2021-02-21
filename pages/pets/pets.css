@@ -360,6 +360,7 @@ ul.friends__list.slider {
 .pets {
   background: #F6F6F6;
   padding-bottom: 10rem;
+  top: 15rem;
 }
 
 .pets__wrapper {
@@ -495,10 +496,9 @@ ul.friends__list.slider {
 
 .slide-bar-button:hover {
   cursor: pointer;
-  background-color: #F1CDB3;
 }
 
-.slide-bar-button-previous, .slide-bar-button-first {
+.slide-bar-button.disabled {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   border: 2px solid #CDCDCD;
@@ -525,13 +525,18 @@ ul.friends__list.slider {
   background-color: #F1CDB3;
 }
 
-.slide-bar-button:disabled, .slide-bar-button [disabled] {
+.slide-bar-button[disabled] {
   border: 2px solid #CDCDCD;
 }
 
-.slide-bar-button:disabled:hover, .slide-bar-button [disabled] {
+.slide-bar-button[disabled]:hover {
   background-color: transparent;
   cursor: auto;
+}
+
+.slide-bar-button-previous, .slide-bar-button-first {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .footer {
@@ -562,7 +567,8 @@ ul.friends__list.slider {
   padding-bottom: 5rem;
 }
 
-.footer__wrapper__link a, .footer__wrapper__address a {
+.footer__wrapper__link a,
+.footer__wrapper__address a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,7 +592,8 @@ ul.friends__list.slider {
   color: #F1CDB3;
 }
 
-.footer__wrapper__link a img, .footer__wrapper__address a img {
+.footer__wrapper__link a img,
+.footer__wrapper__address a img {
   margin-right: 2rem;
 }
 
@@ -886,14 +893,10 @@ ul.friends__list.slider {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   ul.friends__list.slider {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    -webkit-column-gap: 4rem;
-            column-gap: 4rem;
     row-gap: 3.5rem;
     padding: 0;
   }
@@ -1050,14 +1053,16 @@ ul.friends__list.slider {
   .footer__wrapper__link.number, .footer__wrapper__address__street.london {
     padding-bottom: 0;
   }
-  .footer__wrapper__link a, .footer__wrapper__address a {
+  .footer__wrapper__link a,
+  .footer__wrapper__address a {
     margin-top: 0.3rem;
     text-decoration: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .footer__wrapper__link a img, .footer__wrapper__address a img {
+  .footer__wrapper__link a img,
+  .footer__wrapper__address a img {
     margin-right: 2rem;
   }
   .footer__wrapper__image {
