@@ -38,7 +38,7 @@ fetch('../js/pets.json').then(res => res.json()).then(json => {
     petsSlider.addEventListener('click', (evt) => {
       evt.preventDefault()
       if (evt.target.parentNode.classList.contains('pets__content-items')) {
-        popup(event, main);
+        popup(event, 'main');
       }
     });
   }
